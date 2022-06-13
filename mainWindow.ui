@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1020</width>
-    <height>657</height>
+    <width>1026</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,6 +26,11 @@
     <column>
      <property name="text">
       <string>UserId</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Login Date</string>
      </property>
     </column>
     <column>
