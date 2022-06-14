@@ -17,7 +17,8 @@ from main import *
 
 GLOBAL_STATE = 0
 
-class UIFunctions(LoginLog):
+
+class UIFunctions:
 
     # ==> MAXIMIZE RESTORE FUNCTION
     # def maximize_restore(self):
@@ -46,11 +47,11 @@ class UIFunctions(LoginLog):
     def maximize_restore(self):
         if self.isMaximized():
             self.showNormal()
+            self.btn_maximize.setToolTip("Maximize")
 
         else:
             self.showMaximized()
-
-
+            self.btn_maximize.setToolTip("Restore")
 
     ## ==> UI DEFINITIONS
     def uiDefinitions(self):
@@ -79,11 +80,11 @@ class UIFunctions(LoginLog):
         self.btn_close.clicked.connect(lambda: self.close())
 
         # ==> CREATE SIZE GRIP TO RESIZE WINDOW
+
         # self.sizegrip = QSizeGrip(self.frame_grip)
-        # self.sizegrip.setStyleSheet("QSizeGrip { width: 10px; height: 10px; margin: 5px } QSizeGrip:hover { background-color: rgb(50, 42, 94) }")
-        # # self.sizegrip.setToolTip("Resize Window")
-
-
+        # self.sizegrip.setStyleSheet(
+        #     "QSizeGrip { width: 10px; height: 10px; margin: 5px } QSizeGrip:hover { background-color: rgb(50, 42, 94) }")
+        # self.sizegrip.setToolTip("Resize Window")
 
     # # RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     # def returnStatus(self):

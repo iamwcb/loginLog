@@ -21,8 +21,17 @@ class LoginLog(QMainWindow, Ui_MainWindow):
         self.tableWidget.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents)
         # 隐藏列表头
         self.tableWidget.verticalHeader().setVisible(False)
+        # QSizeGrip(self)
 
         UIFunctions.uiDefinitions(self)
+
+    # def resizeEvent(self, event):
+    # QMainWindow.resizeEvent(self, event)
+    # rect = self.rect()
+    #
+    # # bottom right
+    # self.grip.move(
+    #     rect.right() - self.gripSize, rect.bottom() - self.gripSize)
 
     def mousePressEvent(self, event):  # 以下3个函数用来使窗口可以拖动
         if event.button() == Qt.LeftButton:
