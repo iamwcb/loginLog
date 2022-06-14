@@ -53,14 +53,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.label_title = QtWidgets.QLabel(self.frame_title)
         font = QtGui.QFont()
-        font.setFamily("Consolas")
+        font.setFamily("Calibri")
         font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_title.setFont(font)
         self.label_title.setStyleSheet("color: rgb(60, 231, 195);")
         self.label_title.setObjectName("label_title")
         self.horizontalLayout_5.addWidget(self.label_title)
         self.openBtn = QtWidgets.QPushButton(self.frame_title)
         self.openBtn.setStyleSheet("                     QPushButton\n"
+"\n"
 "                     {text-align : center;\n"
 "                     background-color : white;\n"
 "                     font: bold;\n"
@@ -69,12 +72,14 @@ class Ui_MainWindow(object):
 "                     border-radius: 10px;\n"
 "                     padding: 6px;\n"
 "                     height : 14px;\n"
-"                     font : 14px;}\n"
+"                     font : 14px;\n"
+"                     font: 75 9pt \"Calibri\";}\n"
 "                     QPushButton:pressed\n"
 "                     {text-align : center;\n"
 "                     background-color : light gray;\n"
 "                     font: bold;\n"
 "font-color:white;\n"
+"\n"
 "                     border-color: gray;\n"
 "                     border-width: 2px;\n"
 "                     border-radius: 10px;\n"
@@ -149,6 +154,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.content_bar)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.tableWidget = QtWidgets.QTableWidget(self.content_bar)
+        font = QtGui.QFont()
+        font.setFamily("Calibri Light")
+        font.setPointSize(11)
+        self.tableWidget.setFont(font)
         self.tableWidget.setStyleSheet("QTableWidget {\n"
 "background-color: transparent;\n"
 "}\n"
@@ -160,7 +169,7 @@ class Ui_MainWindow(object):
 "QHeaderView {\n"
 "background-color: transparent;\n"
 "color: white;\n"
-"font: bold 10pt;\n"
+"font: bold 12pt \"Calibri\";\n"
 "}\n"
 "\n"
 "\n"
@@ -170,11 +179,9 @@ class Ui_MainWindow(object):
 "gridline-color: transparent;\n"
 "}\n"
 "\n"
-"QTableCornerButton::section {\n"
-"background-color: transparent;\n"
-"}")
+"")
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(3)
+        self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
@@ -182,6 +189,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
         self.verticalLayout_2.addWidget(self.tableWidget)
         self.verticalLayout.addWidget(self.content_bar)
         self.credits_bar = QtWidgets.QFrame(self.drop_shadow_frame)
@@ -228,16 +237,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_title.setText(_translate("MainWindow", "Teamcenter LoginInfo"))
+        self.label_title.setText(_translate("MainWindow", "TEAMCENTER LOGIN INFO"))
         self.openBtn.setText(_translate("MainWindow", "OPEN"))
         self.btn_maximize.setToolTip(_translate("MainWindow", "Maximize"))
         self.btn_minimize.setToolTip(_translate("MainWindow", "Minimize"))
         self.btn_close.setToolTip(_translate("MainWindow", "Close"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "UserId"))
+        item.setText(_translate("MainWindow", "No."))
         item = self.tableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Login Date"))
+        item.setText(_translate("MainWindow", "UserId"))
         item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Login Date"))
+        item = self.tableWidget.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Login Time"))
-        self.label_credits.setText(_translate("MainWindow", "共性中心|应用软件组"))
-import resources_rc
+        self.label_credits.setText(_translate("MainWindow", "共性中心|应用软件组 V1.0"))
