@@ -50,8 +50,6 @@ class Ui_MainWindow(object):
         self.frame_title.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_title.setObjectName("frame_title")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_title)
-        self.horizontalLayout_5.setContentsMargins(15, 0, 0, 0)
-        self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.label_title = QtWidgets.QLabel(self.frame_title)
         font = QtGui.QFont()
@@ -62,13 +60,35 @@ class Ui_MainWindow(object):
         self.label_title.setObjectName("label_title")
         self.horizontalLayout_5.addWidget(self.label_title)
         self.openBtn = QtWidgets.QPushButton(self.frame_title)
-        self.openBtn.setStyleSheet("QPushButton{\n"
-"color: white;\n"
-"font-family: consolas;\n"
-"font : 16px;}\n"
+        self.openBtn.setStyleSheet("                     QPushButton\n"
+"                     {text-align : center;\n"
+"                     background-color : white;\n"
+"                     font: bold;\n"
+"                     border-color: gray;\n"
+"                     border-width: 2px;\n"
+"                     border-radius: 10px;\n"
+"                     padding: 6px;\n"
+"                     height : 14px;\n"
+"                     font : 14px;}\n"
+"                     QPushButton:pressed\n"
+"                     {text-align : center;\n"
+"                     background-color : light gray;\n"
+"                     font: bold;\n"
+"font-color:white;\n"
+"                     border-color: gray;\n"
+"                     border-width: 2px;\n"
+"                     border-radius: 10px;\n"
+"                     padding: 6px;\n"
+"                     height : 14px;\n"
+"                     font : 14px;}\n"
+"QPushButton:hover {    \n"
+"    background-color: rgb(60, 231, 195);\n"
+"}\n"
 "")
         self.openBtn.setObjectName("openBtn")
         self.horizontalLayout_5.addWidget(self.openBtn)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem)
         self.horizontalLayout.addWidget(self.frame_title)
         self.frame_btns = QtWidgets.QFrame(self.title_bar)
         self.frame_btns.setMaximumSize(QtCore.QSize(100, 16777215))
@@ -209,7 +229,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_title.setText(_translate("MainWindow", "Teamcenter LoginInfo"))
-        self.openBtn.setText(_translate("MainWindow", "Open log"))
+        self.openBtn.setText(_translate("MainWindow", "OPEN"))
         self.btn_maximize.setToolTip(_translate("MainWindow", "Maximize"))
         self.btn_minimize.setToolTip(_translate("MainWindow", "Minimize"))
         self.btn_close.setToolTip(_translate("MainWindow", "Close"))

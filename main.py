@@ -14,6 +14,7 @@ class LoginLog(QMainWindow, Ui_MainWindow):
         super(LoginLog, self).__init__(parent)
         self.setupUi(self)
         self.openBtn.clicked.connect(self.load_log)
+
         # 列宽自动分配
         self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         UIFunctions.uiDefinitions(self)

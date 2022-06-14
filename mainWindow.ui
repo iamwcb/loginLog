@@ -103,21 +103,6 @@ border-radius: 10px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>15</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
              <item>
               <widget class="QLabel" name="label_title">
                <property name="font">
@@ -137,16 +122,49 @@ border-radius: 10px;</string>
              <item>
               <widget class="QPushButton" name="openBtn">
                <property name="styleSheet">
-                <string notr="true">QPushButton{
-color: white;
-font-family: consolas;
-font : 16px;}
+                <string notr="true">                     QPushButton
+                     {text-align : center;
+                     background-color : white;
+                     font: bold;
+                     border-color: gray;
+                     border-width: 2px;
+                     border-radius: 10px;
+                     padding: 6px;
+                     height : 14px;
+                     font : 14px;}
+                     QPushButton:pressed
+                     {text-align : center;
+                     background-color : light gray;
+                     font: bold;
+font-color:white;
+                     border-color: gray;
+                     border-width: 2px;
+                     border-radius: 10px;
+                     padding: 6px;
+                     height : 14px;
+                     font : 14px;}
+QPushButton:hover {	
+	background-color: rgb(60, 231, 195);
+}
 </string>
                </property>
                <property name="text">
-                <string>Open log</string>
+                <string>OPEN</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
